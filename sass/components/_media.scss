@@ -1,0 +1,27 @@
+.media {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  &::before {
+    content: '';
+    height: 1px;
+    width: 60px;
+    background-color: var(--main-text-color);
+  }
+}
+
+.media__link {
+  display: block;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+
+  transition: color var(--animation);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}

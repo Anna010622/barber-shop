@@ -1,0 +1,11 @@
+.logo__img {
+  transition: fill 300ms linear;
+
+  .header.no-transparency & {
+    fill: #ffffff;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    fill: #ffffff;
+  }
+}

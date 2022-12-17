@@ -1,86 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BarberShop</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/faviconT/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/faviconT/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/faviconT/favicon-16x16.png" />
+    <link rel="manifest" href="./images/faviconT/site.webmanifest" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Modern normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>BarberShop</title>
-	<!-- Favicon -->
-	<link rel="apple-touch-icon" sizes="180x180" href="./images/faviconT/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="./images/faviconT/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="./images/faviconT/favicon-16x16.png">
-	<link rel="manifest" href="./images/faviconT/site.webmanifest">
-	<!-- Fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
-		rel="stylesheet" />
-	<!-- Modern normalize -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-		integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<!-- Custom styles -->
-	<link rel="stylesheet" href="./css/styles.css" />
-</head>
-
-<body>
-	<!-- Header section -->
-	<header class="header" data-header>
-		<div class="container header-container">
-			<a class="header-link" href="./index.html" aria-label="Barbershop logo">
-				<svg class="header-logo" width="69" height="55">
+  <body>
+    <!-- Header section -->
+    <header class="header" data-header>
+		<div class="container header__container">
+			<a class="header__logo logo" href="./index.html" aria-label="barbershop logo">
+				<svg class="logo__img" width="69" height="55">
 					<use href="./images/icons.svg#icon-logo"></use>
 				</svg>
 			</a>
-			<nav class="header-nav">
-				<ul class="header-nav-list">
-					<li class="header-nav-item"><a class="header-nav-link" href="#about">About</a></li>
-					<li class="header-nav-item"><a class="header-nav-link" href="#prices">Services and prices</a></li>
-					<li class="header-nav-item"><a class="header-nav-link" href="#barbers">Barbers</a></li>
-					<li class="header-nav-item"><a class="header-nav-link" href="#contacts">Contacts</a></li>
+			<nav class="header__nav">
+				<ul class="header__nav-list">
+					<li class="header__nav-item"><a class="header__nav-link" href="#about">About</a></li>
+					<li class="header__nav-item"><a class="header__nav-link" href="#prices">Services and prices</a></li>
+					<li class="header__nav-item"><a class="header__nav-link" href="#barbers">Barbers</a></li>
+					<li class="header__nav-item"><a class="header__nav-link" href="#contacts">Contacts</a></li>
 				</ul>
 			</nav>
-			<div class="header-group">
-				<a class="header-contact" href="tel:+380441111111">+38 044 111 11 11</a>
-				<button class="btn btn-theme-dark" type="button" data-modal-open>Online-booking</button>
+			<div class="header__group">
+				<a class="header__contact" href="tel:+380441111111">+38 044 111 11 11</a>
+				<button class="btn btn--theme-dark" type="button" data-modal-open>Online-booking</button>
 			</div>
+
+      <button
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+       >
+        <svg class="menu-toggle__icon" width="40" height="40">
+          <use href="./images/icons.svg#icon-burger"></use>
+        </svg>
+      </button>
 		</div>
 	</header>
 
-	<!-- Main section -->
-	<main>
-		<!-- Hero -->
-		<section class="hero">
-			<div class="container hero-container">
-				<div class="hero-left-side">
-					<ul class="media-list">
-						<li class="media-item">
-							<a class="media-link" href="http://" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <!-- Main section -->
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+			<div class="container hero__container">
+				<div class="hero__left-side">
+					<ul class="hero__media media">
+						<li class="media__item">
+							<a class="media__link" href="http://" target="_blank" rel="noopener noreferrer">Instagram</a>
 						</li>
-						<li class="media-item">
-							<a class="media-link" href="http://" target="_blank" rel="noopener noreferrer">Youtube</a>
+						<li class="media__item">
+							<a class="media__link" href="http://" target="_blank" rel="noopener noreferrer">Youtube</a>
 						</li>
 					</ul>
 				</div>
-				<div class="hero-right-side">
-					<p class="hero-upper-title upper-title upper-title-theme-dark">A hair salon for men in Kyiv</p>
-					<h1 class="hero-title">BarberShop</h1>
-					<p class="hero-under-title">We are experts in trendy men’s haircuts.<br> We work quickly, carefully and with
+				<div class="hero__right-side">
+					<p class="hero__upper-title upper-title upper-title--theme-dark">A hair salon for men in Kyiv</p>
+					<h1 class="hero__title">BarberShop</h1>
+					<p class="hero__under-title">We are experts in trendy men’s haircuts.<br> We work quickly, carefully and with
 						style.</p>
 
 					<ul class="slider-pagination">
-						<li class="slider-pagination-item active"></li>
-						<li class="slider-pagination-item"></li>
-						<li class="slider-pagination-item"></li>
+						<li class="slider-pagination__item slider-pagination__item--active"></li>
+						<li class="slider-pagination__item"></li>
+						<li class="slider-pagination__item"></li>
 					</ul>
 
-					<ul class="slider-list">
-						<li class="slider-item">
-							<button class="slider-btn prev" disabled type="button">Back</button>
+					<ul class="slider">
+						<li class="slider__item">
+							<button class="slider__btn slider__btn--prev" disabled type="button">Back</button>
 						</li>
-						<li class="slider-item">
-							<button class="slider-btn next" type="button">Forward</button>
+						<li class="slider__item">
+							<button class="slider__btn slider__btn--next" type="button">Forward</button>
 						</li>
 					</ul>
 
@@ -89,21 +104,85 @@
 			</div>
 		</section>
 
-		<!-- About -->
-		<section class="section about-section" id="about">
-			<div class="container about-container">
-				<ul class="about-list">
-					<li class="about-item"><img class="about-img" src="./images/сontent-images/img-1.jpg" alt="man's beard"
-							width="270" height="445" /></li>
-					<li class="about-item"><img class="about-img" src="./images/сontent-images/img-2.jpg" alt="men's haircut"
-							width="270" height="445" /></li>
+      <!-- About -->
+      <section class="about section" id="about">
+			<div class="about__container container">
+				<ul class="about__list">
+					<li class="about__item">
+            <picture>
+              <!-- Desktop screen -->
+              <source
+                media="(min-width: 1200px)"
+                srcset="./images/about/desk/img1desk@1x.webp 1x, ./images/about/desk/img1desk@2x.webp 2x"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 1200px)"
+                srcset="./images/about/desk/img1desk@1x.jpg 1x, ./images/about/desk/img1desk@2x.jpg 2x"
+                type="image/jpg"
+              />
+              <!-- Tablet screen -->
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/about/tab/img1tab@1x.webp 1x, ./images/about/tab/img1tab@2x.webp 2x"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/about/tab/img1tab@1x.jpg 1x, ./images/about/tab/img1tab@2x.jpg 2x"
+                type="image/jpg"
+              />
+              <img
+                class="gallery-img"
+                src="./images/about/tab/img1tab@1x.jpg"
+                alt="man's beard"
+                width="330"
+                height="235"
+                loading="lazy"
+              />
+            </picture>
+            </li>
+					<li class="about__item">
+            <picture>
+              <!-- Desktop screen -->
+              <source
+                media="(min-width: 1200px)"
+                srcset="./images/about/desk/img2desk@1x.webp 1x, ./images/about/desk/img2desk@2x.webp 2x"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 1200px)"
+                srcset="./images/about/desk/img2desk@1x.jpg 1x, ./images/about/desk/img2desk@2x.jpg 2x"
+                type="image/jpg"
+              />
+              <!-- Tablet screen -->
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/about/tab/img2tab@1x.webp 1x, ./images/about/tab/img2tab@2x.webp 2x"
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="./images/about/tab/img2tab@1x.jpg 1x, ./images/about/tab/img2tab@2x.jpg 2x"
+                type="image/jpg"
+              />
+              <img
+                class="gallery-img"
+                src="./images/about/tab/img2tab@1x.jpg"
+                alt="men's haircut"
+                width="330"
+                height="235"
+                loading="lazy"
+              />
+            </picture>
+          </li>
 				</ul>
-				<div class="about-right-side">
+				<div class="about__right-side">
 					<p class="upper-title">About</p>
-					<h2 class="title">Best Barbershop in your city</h2>
+					<h2 class="title title--about">Best Barbershop in your city</h2>
 					<p class="under-title">If you want to add more confidence to your image, you should definitely visit
 						us.</p>
-					<p class="about-description">
+					<p class="about__description">
 						We are a team that never stops at what has been achieved and are thirsty for changes. And when you fall
 						into the hands of our master, you will never be the same again. We are a team that is always "on the same
 						wave" with clients. Therefore, we are always ready to improve everyone who comes to us!
@@ -113,353 +192,804 @@
 			</div>
 		</section>
 
-		<!-- Prices -->
-		<section class="section prices-section" id="prices">
+      <!-- Prices -->
+      <section class="section price" id="prices">
 			<div class="container">
-				<p class="upper-title under-title-theme-dark">Spend your time with the best masters</p>
-				<h2 class="title title-theme-dark">Services and prices</h2>
-				<div class="price-block">
-					<ul class="price-list">
-						<li class="price-item">
-							<span class="price-item-service">Men’s haircut</span> from 300 uah.
+				<p class="upper-title under-title--theme-dark">Spend your time with the best masters</p>
+				<h2 class="title title--theme-dark title--price">Services and prices</h2>
+				<div class="price__block">
+					<ul class="price__list">
+						<li class="price__item">
+							<span class="price__service">Men’s haircut</span> from 300 uah.
 						</li>
-						<li class="price-item">
-							<span class="price-item-service">Beard trim</span> from 300 uah.
+						<li class="price__item">
+							<span class="price__service">Beard trim</span> from 300 uah.
 						</li>
-						<li class="price-item">
-							<span class="price-item-service">Mustache trim</span> from 200 uah.
+						<li class="price__item">
+							<span class="price__service">Mustache trim</span> from 200 uah.
 						</li>
-						<li class="price-item">
-							<span class="price-item-service">Straight razor shave</span> from 200 uah.
+						<li class="price__item">
+							<span class="price__service">Straight razor shave</span> from 200 uah.
 						</li>
 					</ul>
-					<ul class="price-list">
-						<li class="price-item">
-							<span class="price-item-service">Trainee’s haircut</span> from 50 uah.
+					<ul class="price__list">
+						<li class="price__item">
+							<span class="price__service">Trainee’s haircut</span> from 50 uah.
 						</li>
-						<li class="price-item">
-							<span class="price-item-service">Haircut under the nozzle</span> from 200 uah.
+						<li class="price__item">
+							<span class="price__service">Haircut under the nozzle</span> from 200 uah.
 						</li>
-						<li class="price-item">
-							<span class="price-item-service">Children’s haircut (0-12 y.o.)</span> from 300 uah.
+						<li class="price__item">
+							<span class="price__service">Children’s haircut (0-12 y.o.)</span> from 300 uah.
 						</li>
-						<li class="price-item">
-							<span class="price-item-service">Camouflage of gray hair</span> from 200 uah.
+						<li class="price__item">
+							<span class="price__service">Camouflage of gray hair</span> from 200 uah.
 						</li>
 					</ul>
 				</div>
-				<button class="btn btn-theme-dark price-btn" type="button" data-modal-open>Online-booking</button>
+				<button class="btn btn--theme-dark price__btn" type="button" data-modal-open>Online-booking</button>
 		</section>
 
-		<!--  Benefits -->
-		<section class="section benefits-section">
-			<div class="container benefits-container">
-				<div class="benefits-left-side">
-					<ul class="benefits-list">
-						<li class="quantity-item">
-							<p class="benefits-quantity">600 <sup class="benefits-decor">+</sup></p>
-							<p class="benefits-text">Satisfied customers per day</p>
-						</li>
-						<li class="quantity-item">
-							<p class="benefits-quantity">50 <sup class="benefits-decor">+</sup></p>
-							<p class="benefits-text">Awards for excellent service</p>
-						</li>
-						<li class="quantity-item">
-							<p class="benefits-quantity">20 <sup class="benefits-decor">+</sup></p>
-							<p class="benefits-text">Kyiv’s best barbers</p>
-						</li>
-						<li class="quantity-item">
-							<p class="benefits-quantity">100 <sup class="benefits-decor">+</sup></p>
-							<p class="benefits-text">Gifts for regular customers</p>
-						</li>
-					</ul>
-				</div>
-				<div class="benefits-right-side">
+      <!--  Benefits -->
+      <section class="section benefits__section">
+			<div class="container benefits__container">
+
+        <div class="benefits__right-side">
 					<p class="upper-title">Old traditional school</p>
 					<h2 class="title">¿Why people come to us?</h2>
-					<p class="under-title">Only good things are said about us. But it's better to see and feel 1 time than
+					<p class="benefits__under-title under-title">Only good things are said about us. But it's better to see and feel 1 time than
 						read 10 times.</p>
 				</div>
+				<div class="benefits__left-side">
+					<ul class="benefits__list">
+						<li class="benefits__item">
+							<p class="benefits__quantity">600 <sup class="benefits__decor">+</sup></p>
+							<p class="benefits__text">Satisfied customers per day</p>
+						</li>
+						<li class="benefits__item">
+							<p class="benefits__quantity">50 <sup class="benefits__decor">+</sup></p>
+							<p class="benefits__text">Awards for excellent service</p>
+						</li>
+						<li class="benefits__item">
+							<p class="benefits__quantity">20 <sup class="benefits__decor">+</sup></p>
+							<p class="benefits__text">Kyiv’s best barbers</p>
+						</li>
+						<li class="benefits__item">
+							<p class="benefits__quantity">100 <sup class="benefits__decor">+</sup></p>
+							<p class="benefits__text">Gifts for regular customers</p>
+						</li>
+					</ul>
+				</div>
+
 			</div>
 			</div>
 		</section>
 
-		<!-- Barbers -->
-		<section class="section barbers-section" id="barbers">
-			<div class="container">
-				<p class="upper-title">For true enjoyers of the atmosphere</p>
-				<h2 class="title">Our barbers</h2>
-				<ul class="barbers-list card-set">
-					<li class="barbers-item card-set-item">
-						<img src="./images/сontent-images/john-smith.jpg" alt="John Smith's photo" width="370" height="346" />
-						<div class="barbers-wrapper">
-							<h3 class="barber-name">John Smith</h3>
-							<p class="barber-position">Extreme Barber</p>
-						</div>
-						<ul class="socials">
-							<li class="socials-item">
-								<a class="socials-link" href="" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-									<svg class="social-icon" width="20" height="20">
-										<use href="./images/icons.svg#icon-instagram"></use>
-									</svg>
-								</a>
-							</li>
-							<li class="socials-item">
-								<a class="socials-link" href="" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-									<svg class="social-icon" width="20" height="20">
-										<use href="./images/icons.svg#icon-twitter"></use>
-									</svg>
-								</a>
-							</li>
-							<li class="socials-item">
-								<a class="socials-link" href="" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-									<svg class="social-icon" width="20" height="20">
-										<use href="./images/icons.svg#icon-facebook"></use>
-									</svg>
-								</a>
-							</li>
-							<li class="socials-item">
-								<a class="socials-link" href="" target="_blank" rel="noopener noreferrer" aria-label="Linkedin">
-									<svg class="social-icon" width="20" height="20">
-										<use href="./images/icons.svg#icon-linkedin"></use>
-									</svg>
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li class="barbers-item card-set-item">
-						<img src="./images/сontent-images/michele-doe.jpg" alt="Michele Doe's photo" width="370" height="346" />
-						<div class="barbers-wrapper">
-							<h3 class="barber-name">Michele Doe</h3>
-							<p class="barber-position">Extreme Barber</p>
-						</div>
-						<ul class="socials">
-							<li class="socials-item">
-								<a class="socials-link" href="" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-									<svg class="social-icon" width="20" height="20">
-										<use href="./images/icons.svg#icon-instagram"></use>
-									</svg>
-								</a>
-							</li>
-							<li class="socials-item">
-								<a class="socials-link" href="" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-									<svg class="social-icon" width="20" height="20">
-										<use href="./images/icons.svg#icon-twitter"></use>
-									</svg>
-								</a>
-							</li>
-							<li class="socials-item">
-								<a class="socials-link" href="" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-									<svg class="social-icon" width="20" height="20">
-										<use href="./images/icons.svg#icon-facebook"></use>
-									</svg>
-								</a>
-							</li>
-							<li class="socials-item">
-								<a class="socials-link" href="" target="_blank" rel="noopener noreferrer" aria-label="Linkedin">
-									<svg class="social-icon" width="20" height="20">
-										<use href="./images/icons.svg#icon-linkedin"></use>
-									</svg>
-								</a>
-							</li>
-						</ul>
-					</li>
-					<li class="barbers-item card-set-item">
-						<img src="./images/сontent-images/alan-black.jpg" alt="Alan Black`s photo" width="370" height="346" />
-						<div class="barbers-wrapper">
-							<h3 class="barber-name">Alan Black</h3>
-							<p class="barber-position">Extreme Barber</p>
-						</div>
-						<ul class="socials">
-							<li class="socials-item">
-								<a class="socials-link" href="" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-									<svg class="social-icon" width="20" height="20">
-										<use href="./images/icons.svg#icon-instagram"></use>
-									</svg>
-								</a>
-							</li>
-							<li class="socials-item">
-								<a class="socials-link" href="" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-									<svg class="social-icon" width="20" height="20">
-										<use href="./images/icons.svg#icon-twitter"></use>
-									</svg>
-								</a>
-							</li>
-							<li class="socials-item">
-								<a class="socials-link" href="" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-									<svg class="social-icon" width="20" height="20">
-										<use href="./images/icons.svg#icon-facebook"></use>
-									</svg>
-								</a>
-							</li>
-							<li class="socials-item">
-								<a class="socials-link" href="" target="_blank" rel="noopener noreferrer" aria-label="Linkedin">
-									<svg class="social-icon" width="20" height="20">
-										<use href="./images/icons.svg#icon-linkedin"></use>
-									</svg>
-								</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</section>
+      <!-- Team -->
+      <section class="section team" id="barbers">
+        <div class="team__container container">
+          <p class="upper-title">For true enjoyers of the atmosphere</p>
+          <h2 class="team__title title">Our Barbers</h2>
+          <ul class="team__list card-set">
+            <li class="team__item card-set__item">
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/desk/img1desk@1x.webp 1x, ./images/team/desk/img1desk@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/desk/img1desk@1x.jpg 1x, ./images/team/desk/img1desk@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/tab/img1tab@1x.webp 1x, ./images/team/tab/img1tab@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/tab/img1tab@1x.jpg 1x, ./images/team/tab/img1tab@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767.98px)"
+                  srcset="./images/team/mob/img1mob@1x.webp 1x, ./images/team/mob/img1mob@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767.98px)"
+                  srcset="./images/team/mob/img1mob@1x.jpg 1x, ./images/team/mob/img1mob@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/team/mob/img1mob@1x.jpg"
+                  alt="John Smith's photo"
+                  height="346"
+                  loading="lazy"
+                />
+              </picture>
+              <div class="team__wrapper">
+                <h3 class="team__name">John Smith</h3>
+                <p class="team__position">Extreme Barber</p>
+              </div>
+              <ul class="socials">
+                <li class="socials__item">
+                  <a
+                    class="socials__link"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                  >
+                    <svg class="socials__icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a
+                    class="socials__link"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Twitter"
+                  >
+                    <svg class="socials__icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a
+                    class="socials__link"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                  >
+                    <svg class="socials__icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a
+                    class="socials__link"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Linkedin"
+                  >
+                    <svg class="socials__icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="team__item card-set__item">
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/desk/img2desk@1x.webp 1x, ./images/team/desk/img2desk@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/desk/img2desk@1x.jpg 1x, ./images/team/desk/img2desk@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/tab/img2tab@1x.webp 1x, ./images/team/tab/img2tab@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/tab/img2tab@1x.jpg 1x, ./images/team/tab/img2tab@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767.98px)"
+                  srcset="./images/team/mob/img2mob@1x.webp 1x, ./images/team/mob/img2mob@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767.98px)"
+                  srcset="./images/team/mob/img2mob@1x.jpg 1x, ./images/team/mob/img2mob@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/team/mob/img2mob@1x.jpg"
+                  alt="Michele Doe's photo"
+                  height="346"
+                  loading="lazy"
+                />
+              </picture>
+              <div class="team__wrapper">
+                <h3 class="team__name">Michele Doe</h3>
+                <p class="team__position">Extreme Barber</p>
+              </div>
+              <ul class="socials">
+                <li class="socials__item">
+                  <a
+                    class="socials__link"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                  >
+                    <svg class="socials__icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a
+                    class="socials__link"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Twitter"
+                  >
+                    <svg class="socials__icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a
+                    class="socials__link"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                  >
+                    <svg class="socials__icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a
+                    class="socials__link"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Linkedin"
+                  >
+                    <svg class="socials__icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="team__item card-set__item">
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/desk/img3desk@1x.webp 1x, ./images/team/desk/img3desk@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/desk/img3desk@1x.jpg 1x, ./images/team/desk/img3desk@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/tab/img3tab@1x.webp 1x, ./images/team/tab/img3tab@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/tab/img3tab@1x.jpg 1x, ./images/team/tab/img3tab@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767.98px)"
+                  srcset="./images/team/mob/img3mob@1x.webp 1x, ./images/team/mob/img3mob@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767.98px)"
+                  srcset="./images/team/mob/img3mob@1x.jpg 1x, ./images/team/mob/img3mob@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/team/mob/img3mob@1x.jpg"
+                  alt="Alan Black`s photo"
+                  height="346"
+                  loading="lazy"
+                />
+              </picture>
+              <div class="team__wrapper">
+                <h3 class="team__name">Alan Black</h3>
+                <p class="team__position">Extreme Barber</p>
+              </div>
+              <ul class="socials">
+                <li class="socials__item">
+                  <a
+                    class="socials__link"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                  >
+                    <svg class="socials__icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a
+                    class="socials__link"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Twitter"
+                  >
+                    <svg class="socials__icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a
+                    class="socials__link"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                  >
+                    <svg class="socials__icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="socials__item">
+                  <a
+                    class="socials__link"
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Linkedin"
+                  >
+                    <svg class="socials__icon" width="20" height="20">
+                      <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-		<!-- Gallery section -->
-		<section class="section gallery-section">
-			<div class="container">
-				<p class="upper-title">In Latin, "barba" means "beard"</p>
-				<h2 class="visually-hidden">Portfolio</h2>
-				<ul class="gallery-list card-set">
-					<li class="gallery-item card-set-item"><img class="gallery-img" src="./images/сontent-images/work-1.jpg"
-							alt="work example #1" width="270" height="360" /></li>
-					<li class="gallery-item card-set-item"><img class="gallery-img" src="./images/сontent-images/work-2.jpg"
-							alt="work example #2" width="270" height="360" /></li>
-					<li class="gallery-item card-set-item"><img class="gallery-img" src="./images/сontent-images/work-3.jpg"
-							alt="work example #3" width="270" height="360" /></li>
-					<li class="gallery-item card-set-item"><img class="gallery-img" src="./images/сontent-images/work-4.jpg"
-							alt="work example #4" width="270" height="360" /></li>
-				</ul>
-			</div>
-		</section>
-		<!-- Booking & Contacts sections -->
+      <!-- Gallery section -->
+      <section class="section gallery-section">
+        <div class="container">
+          <p class="upper-title gallery__upper-title">In Latin, "barba" means "beard"</p>
+          <h2 class="visually-hidden">Portfolio</h2>
+          <ul class="gallery__list card-set">
+            <li class="socials__item card-set__item">
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/gallery/desk/img1desk@1x.webp 1x, ./images/gallery/desk/img1desk@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/gallery/desk/img1desk@1x.jpg 1x, ./images/gallery/desk/img1desk@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/gallery/tab/img1tab@1x.webp 1x, ./images/gallery/tab/img1tab@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/gallery/tab/img1tab@1x.jpg 1x, ./images/gallery/tab/img1tab@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767.98px)"
+                  srcset="./images/gallery/mob/img1mob@1x.webp 1x, ./images/gallery/mob/img1mob@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767.98px)"
+                  srcset="./images/gallery/mob/img1mob@1x.jpg 1x, ./images/gallery/mob/img1mob@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/mob/img1mob@1x.jpg"
+                  alt="work example #1"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
 
-		<div class="contacts-group">
-			<div class="container contacts-container">
-				<section class="booking-section section">
-					<h2 class="title title-theme-dark">Online-booking</h2>
-					<form name="booking_form">
-						<div class="booking-group">
-							<label class="booking-group-field">
-								<input class="booking-input" type="text" name="user_name" placeholder="Jon Smith" required>
-								<span class="booking-label" >Name*</span>
+            </li>
+            <li class="socials__item card-set__item">
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/gallery/desk/img2desk@1x.webp 1x, ./images/gallery/desk/img2desk@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/gallery/desk/img2desk@1x.jpg 1x, ./images/gallery/desk/img2desk@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/gallery/tab/img2tab@1x.webp 1x, ./images/gallery/tab/img2tab@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/gallery/tab/img2tab@1x.jpg 1x, ./images/gallery/tab/img2tab@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767.98px)"
+                  srcset="./images/gallery/mob/img2mob@1x.webp 1x, ./images/gallery/mob/img2mob@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767.98px)"
+                  srcset="./images/gallery/mob/img2mob@1x.jpg 1x, ./images/gallery/mob/img2mob@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/mob/img2mob@1x.jpg"
+                  alt="work example #2"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
+            </li>
+            <li class="socials__item card-set__item">
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/gallery/desk/img3desk@1x.webp 1x, ./images/gallery/desk/img3desk@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/gallery/desk/img3desk@1x.jpg 1x, ./images/gallery/desk/img3desk@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/gallery/tab/img3tab@1x.webp 1x, ./images/gallery/tab/img3tab@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/gallery/tab/img3tab@1x.jpg 1x, ./images/gallery/tab/img3tab@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767.98px)"
+                  srcset="./images/gallery/mob/img3mob@1x.webp 1x, ./images/gallery/mob/img3mob@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767.98px)"
+                  srcset="./images/gallery/mob/img3mob@1x.jpg 1x, ./images/gallery/mob/img3mob@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/mob/img3mob@1x.jpg"
+                  alt="work example #3"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
+            </li>
+            <li class="socials__item card-set__item">
+              <picture>
+                <!-- Desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/gallery/desk/img4desk@1x.webp 1x, ./images/gallery/desk/img4desk@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/gallery/desk/img4desk@1x.jpg 1x, ./images/gallery/desk/img4desk@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/gallery/tab/img4tab@1x.webp 1x, ./images/gallery/tab/img4tab@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/gallery/tab/img4tab@1x.jpg 1x, ./images/gallery/tab/img4tab@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- Mobile screen -->
+                <source
+                  media="(max-width: 767.98px)"
+                  srcset="./images/gallery/mob/img4mob@1x.webp 1x, ./images/gallery/mob/img4mob@2x.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767.98px)"
+                  srcset="./images/gallery/mob/img4mob@1x.jpg 1x, ./images/gallery/mob/img4mob@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="gallery-img"
+                  src="./images/gallery/mob/img4mob@1x.jpg"
+                  alt="work example #4"
+                  width="418"
+                  height="360"
+                  loading="lazy"
+                />
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Booking & Contacts sections -->
+
+      <div class="contacts-booking">
+			<div class="container contacts-booking__container">
+
+				<section class="booking section">
+					<h2 class="title title--theme-dark">Online-booking</h2>
+					<form name="booking__form">
+						<div class="booking__group">
+							<label class="booking__field">
+								<input class="booking__input" type="text" name="user_name" placeholder="Jon Smith" required>
+								<span class="booking__label" >Name*</span>
 							</label>
-							<label class="booking-group-field">
-								<input class="booking-input" type="tel" name="user_phone" placeholder="+38 093 111 11 11" required>
-								<span class="booking-label" >Phone*</span>
+							<label class="booking__field">
+								<input class="booking__input" type="tel" name="user_phone" placeholder="+38 093 111 11 11" required>
+								<span class="booking__label" >Phone*</span>
 							</label>
 						</div>
 						<label class="booking-massage-field">
-							<textarea class="booking-input booking-massage" name="user_massage" id="massage" rows="5" placeholder="Type your massage..."></textarea>
-							<span class="booking-label" >	Massage</span>
+							<textarea class="booking__input booking-massage" name="user_massage" id="massage" rows="5" placeholder="Type your massage..."></textarea>
+							<span class="booking__label" >	Massage</span>
 						</label>
-						<button class="btn btn-theme-dark" type="submit">Send</button>
+						<button class="btn btn--theme-dark" type="submit">Send</button>
 					</form>
 				</section>
 
 
-				<section class="contacts-section section" id="contacts">
-					<h2 class="title title-theme-dark">Contacts</h2>
-					<address class="contacts-address">
-						<ul class="contacts-list">
-							<li class="contacts-item">
-								<a class="contacts-link" href="https://goo.gl/maps/JvaMLd2pm1cKiS9g7" target="_blank"
-									rel="noopener noreferrer nofollow">
-									<svg class="contacts-icon" width="24" height="24">
-										<use href="./images/icons.svg#icon-map-pin"></use>
-									</svg>
-									st. Vasylkivska, 7A
-									<br />
-									Kyiv, 08132
-								</a>
-							</li>
-							<li class="contacts-item">
-								<a class="contacts-link" href="tel:+380441111111">
-									<svg class="contacts-icon" width="24" height="24">
-										<use href="./images/icons.svg#icon-phone"></use>
-									</svg>
-									+38 044 111 11 11</a>
-							</li>
-							<li class="contacts-item">
-								<a class="contacts-link" href="mailto:barbershop@email.com">
-									<svg class="contacts-icon" width="24" height="24">
-										<use href="./images/icons.svg#icon-mail"></use>
-									</svg>
-									barbershop@email.com</a>
-							</li>
-						</ul>
-					</address>
-					<p class="contacts-upper-title upper-title">Working hours</p>
-					<p class="contacts-schedule">Every day from 9:00 to 22:00</p>
+				<section class="contacts section" id="contacts">
+					<h2 class="title title--theme-dark">Contacts</h2>
+          <div class="contacts__wrapper">
+            <address class="contacts__address">
+              <ul class="contacts__list">
+                <li class="contacts__item">
+                  <a class="contacts__link" href="https://goo.gl/maps/JvaMLd2pm1cKiS9g7" target="_blank"
+                    rel="noopener noreferrer nofollow">
+                    <svg class="contacts__icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-map-pin"></use>
+                    </svg>
+                    <span class="contacts__text">
+                      st. Vasylkivska, 7A
+                      Kyiv, 08132
+                    </span>
+                  </a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link" href="tel:+380441111111">
+                    <svg class="contacts__icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-phone"></use>
+                    </svg>
+                    <span class="contacts__text">
+                      +38 044 111 11 11
+                    </span>
+                    </a>
+                </li>
+                <li class="contacts__item">
+                  <a class="contacts__link" href="mailto:barbershop@email.com">
+                    <svg class="contacts__icon" width="24" height="24">
+                      <use href="./images/icons.svg#icon-mail"></use>
+                    </svg>
+                    <span class="contacts__text">
+                      barbershop@email.com
+                    </span>
+                    </a>
+                </li>
+              </ul>
+            </address>
+            <div class="contacts__group">
+              <p class="contacts__upper-title upper-title">Working hours</p>
+              <p class="contacts__schedule">Every day from 9:00 to 22:00</p>
+            </div>
+          </div>
 				</section>
 			</div>
 		</div>
-	</main>
-	<footer class="footer">
-		<div class="footer-container container">
-			<p class="copyright">&#169; Copyright 2020</p>
-			<ul class="media-list">
-				<li class="media-item"><a class="media-link" href="http://" target="_blank"
+    </main>
+    <footer class="footer">
+		<div class="footer__container container">
+			<ul class="footer__media media">
+				<li class="media__item"><a class="media__link" href="http://" target="_blank"
 						rel="noopener noreferrer">Instagram</a></li>
-				<li class="media-item"><a class="media-link" href="http://" target="_blank"
+				<li class="media__item"><a class="media__link" href="http://" target="_blank"
 						rel="noopener noreferrer">Youtube</a></li>
 			</ul>
+      <p class="footer__copyright">&#169; Copyright 2020</p>
 		</div>
 	</footer>
 
-	<!-- Modal window -->
-	<div class="backdrop is-hidden" data-modal>
-		<div class="modal">
-			<bottom class="modal-btn" type="bottom" data-modal-close>
-				<svg class="modal-icon" width="18" height="18">
-					<use href="./images/icons.svg#icon-close"></use>
-				</svg>
-			</bottom>
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <bottom class="modal__btn" type="bottom" data-modal-close>
+          <svg class="modal__icon" width="18" height="18">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </bottom>
 
-			<strong class="modal-title">leave your record, we will call you back</strong>
-			<form class="modal-form" name="modal_form">
-				<div class="modal-form-group" role="group">
-					<label class="modal-form-label" for="user_name">Name</label>
-					<div class="modal-form-wrapper">
-						<input class="modal-form-field" type="text" name="user_name" id="user_name" minlength="3" required placeholder=" ">
-						<svg class="modal-form-icon" width="18" height="18">
-							<use href="./images/icons.svg#icon-person"></use>
-						</svg>
-						<svg class="modal-form-icon-attention" width="18" height="18">
-							<use class="success" href="./images/icons.svg#success"></use>
-							<use class="warning" href="./images/icons.svg#warning"></use>
-						</svg>
-					</div>
+        <strong class="modal__title">leave your record, we will call you back</strong>
+        <form class="modal-form" name="modal_form">
+          <div class="modal-form__group" role="group">
+            <label class="modal-form__label" for="user_name">Name</label>
+            <div class="modal-form__wrapper">
+              <input
+                class="modal-form__field"
+                type="text"
+                name="user_name"
+                id="user_name"
+                minlength="3"
+                required
+                placeholder=" "
+              />
+              <svg class="modal-form__icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>
+              <svg class="modal-form__icon-attention" width="18" height="18">
+                <use class="success" href="./images/icons.svg#success"></use>
+                <use class="warning" href="./images/icons.svg#warning"></use>
+              </svg>
+            </div>
 
-					<label class="modal-form-label" for="user_phone">Phone</label>
-					<div class="modal-form-wrapper">
-						<input class="modal-form-field" type="tel" name="user_phone" id="user_phone" required placeholder=" ">
-						<svg class="modal-form-icon" width="18" height="18">
-							<use href="./images/icons.svg#icon-phone-modal"></use>
-						</svg>
-						<svg class="modal-form-icon-attention" width="18" height="18">
-							<use class="success" href="./images/icons.svg#success"></use>
-							<use class="warning" href="./images/icons.svg#warning"></use>
-						</svg>
-					</div>
+            <label class="modal-form__label" for="user_phone">Phone</label>
+            <div class="modal-form__wrapper">
+              <input
+                class="modal-form__field"
+                type="tel"
+                name="user_phone"
+                id="user_phone"
+                required
+                placeholder=" "
+              />
+              <svg class="modal-form__icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-phone-modal"></use>
+              </svg>
+              <svg class="modal-form__icon-attention" width="18" height="18">
+                <use class="success" href="./images/icons.svg#success"></use>
+                <use class="warning" href="./images/icons.svg#warning"></use>
+              </svg>
+            </div>
 
-					<label class="modal-form-label" for="user_email">E-mail</label>
-					<div class="modal-form-wrapper">
-						<input class="modal-form-field" type="email" name="user_email" id="user_email" required placeholder=" ">
-						<svg class="modal-form-icon" width="18" height="18">
-							<use href="./images/icons.svg#icon-email-modal"></use>
-						</svg>
-						<svg class="modal-form-icon-attention" width="18" height="18">
-							<use class="success" href="./images/icons.svg#success"></use>
-							<use class="warning" href="./images/icons.svg#warning"></use>
-						</svg>
-					</div>
+            <label class="modal-form__label" for="user_email">E-mail</label>
+            <div class="modal-form__wrapper">
+              <input
+                class="modal-form__field"
+                type="email"
+                name="user_email"
+                id="user_email"
+                required
+                placeholder=" "
+              />
+              <svg class="modal-form__icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-email-modal"></use>
+              </svg>
+              <svg class="modal-form__icon-attention" width="18" height="18">
+                <use class="success" href="./images/icons.svg#success"></use>
+                <use class="warning" href="./images/icons.svg#warning"></use>
+              </svg>
+            </div>
 
-					<label class="modal-form-label" for="user_comment">Comment</label>
-					<textarea class="modal-form-comment modal-form-field" name="user_comment" id="user_comment" rows="7"></textarea>
-				</div>
+            <label class="modal-form__label" for="user_comment">Comment</label>
+            <textarea
+              class="modal-form__comment modal-form__field"
+              name="user_comment"
+              id="user_comment"
+              rows="7"
+            ></textarea>
+          </div>
 
-				<div class="checkbox-group" role="group">
-					<input class="modal-form-checkbox" type="checkbox" id="user_agreement">
-					<label class="modal-form-label modal-form-checkbox-label" for="user_agreement">I agree with the mailing and accept <a class="modal-form-link" href="">Contract terms</a></label>
-				</div>
-				<button class="modal-form-btn btn" type="submit">Send</button>
-			</form>
-		</div>
-	</div>
+          <div class="checkbox__group " role="group">
+            <input class="checkbox__group__checkbox" type="checkbox" id="user_agreement" />
+            <label class="checkbox__group__label" for="user_agreement"
+              >I agree with the mailing and accept
+              <a class="checkbox__group__link" href="">Contract terms</a></label
+            >
+          </div>
+          <button class="checkbox__group__btn btn" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
 
-	<script src="./js/header-scroll.js"></script>
-	<script src="./js/modal.js"></script>
-</body>
+    <!-- Mobile menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <div class="menu">
+        <button class="menu-toggle js-close-menu">
+          <svg class="" width="40" height="40">
+            <use class="menu-toggle__icon" href="./images/icons.svg#icon-menu-close"></use>
+          </svg>
+        </button>
+  
+        <ul class="mobile-menu">
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#about">About</a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#prices">Services and prices</a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#barbers">Barbers</a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#contacts">Contacts</a></li>
+        </ul>
+  
+        <div class="menu__group">
+          <a class="menu__contact" href="tel:+380441111111">+38 044 111 11 11</a>
+          <button class="menu__btn btn" type="button" data-modal-open>Online-booking</button>
+        </div>
+  
+        <ul class="media menu__media">
+          <li class="media__item">
+            <a class="media__link" href="http://" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </li>
+          <li class="media__item">
+            <a class="media__link" href="http://" target="_blank" rel="noopener noreferrer">Youtube</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
+
+    <script src="./js/header-scroll.js"></script>
+    <script src="./js/modal.js"></script>
+  </body>
 </html>

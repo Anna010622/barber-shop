@@ -1,0 +1,130 @@
+.contacts-booking {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: var(--dark-bg-cl);
+  background-repeat: no-repeat;
+  background-position: left 50% bottom 0;
+  background-size: 100% 496px;
+
+  // Mobile screen
+  background-image: url(../images/contacts/mob/img1mob@1x.png);
+  background-image: image-set(
+    url(../images/contacts/mob/img1mob@2x.webp) 2x,
+    url(../images/contacts/mob/img1mob@1x.webp) 1x,
+    url(../images/contacts/mob/img1mob@2x.png) 2x,
+    url(../images/contacts/mob/img1mob@1x.png) 1x
+  );
+
+  // Tablet screen
+  @media screen and (min-width: 768px) {
+    background-size: 100% 449px;
+    background-image: url(../images/contacts/tab/img1tab@1x.png);
+    background-image: image-set(
+      url(../images/contacts/tab/img1tab@2x.webp) 2x,
+      url(../images/contacts/tab/img1tab@1x.webp) 1x,
+      url(../images/contacts/tab/img1tab@2x.png) 2x,
+      url(../images/contacts/tab/img1tab@1x.png) 1x
+    );
+  }
+
+  // Desktop screen
+  @media screen and (min-width: 1200px) {
+    background-size: auto;
+    background-position: left calc(50% + 410px) top 50%;
+    background-image: url(../images/contacts/desk/img1desk@1x.png);
+    background-image: image-set(
+      url(../images/contacts/desk/img1desk@2x.webp) 2x,
+      url(../images/contacts/desk/img1desk@1x.webp) 1x,
+      url(../images/contacts/desk/img1desk@2x.png) 2x,
+      url(../images/contacts/desk/img1desk@1x.png) 1x
+    );
+  }
+}
+
+.contacts-booking__container {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.contacts {
+  @media screen and(min-width: 1200px) {
+    width: 570px;
+    padding-left: 100px;
+  }
+}
+
+.contacts__wrapper {
+  @media screen and(min-width:768px) and(max-width:1199.98px) {
+    display: flex;
+    gap: 110px;
+  }
+}
+
+.contacts__address {
+  margin-bottom: 44px;
+
+  @media screen and(min-width: 768px) {
+    margin-bottom: 0;
+  }
+
+  @media screen and(min-width: 1200px) {
+    margin-bottom: 70px;
+  }
+}
+
+.contacts__item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+.contacts__link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: calc(30 / 18);
+  color: var(--secondary-text-color);
+
+  transition: color var(--animation);
+
+  &[href^='tel'] {
+    font-weight: 400;
+  }
+  &[href^='mailto'] {
+    font-weight: 400;
+    text-decoration-line: underline;
+  }
+  &:hover,
+  &:focus {
+    color: var(--light-text-color);
+  }
+}
+
+.contacts__icon {
+  display: block;
+  width: 24px;
+  stroke: currentColor;
+  fill: transparent;
+  @media screen and(min-width:768px) {
+    .contacts__item:nth-child(1) &:nth-child(1) {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.contacts__text {
+  @media screen and(min-width: 768px) {
+    width: 210px;
+  }
+}
+
+.contacts__upper-title {
+  color: var(--light-text-color);
+}
+.contacts__schedule {
+  line-height: calc(30 / 18);
+  color: var(--secondary-text-color);
+}

@@ -1,0 +1,92 @@
+.booking {
+  @media screen and(min-width: 1200px) {
+    width: 570px;
+  }
+}
+
+.booking__group {
+  margin-bottom: 44px;
+  display: flex;
+
+  @media screen and (max-width: 767.98px) {
+    flex-direction: column;
+    gap: 44px;
+  }
+  @media screen and(min-width: 768px) {
+    gap: 30px;
+  }
+}
+.booking__field {
+  position: relative;
+
+  @media screen and(min-width: 768px) {
+    flex-basis: 330px;
+  }
+  @media screen and(min-width: 1200px) {
+    flex-basis: 270px;
+  }
+}
+.booking__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+
+  transform-origin: left;
+  transition: transform var(--animation), color var(--animation);
+
+  .booking__input:focus + &,
+  .booking__input:not(:placeholder-shown) + & {
+    color: var(--light-text-color);
+    transform: translateY(-100%) scale(0.8);
+  }
+}
+
+.booking__input {
+  width: 100%;
+  padding: 0;
+  padding-bottom: 8px;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+
+  background-color: transparent;
+  outline: unset;
+
+  color: var(--light-text-color);
+
+  transition: border-color var(--animation);
+
+  &:focus,
+  &:not(:placeholder-shown) {
+    border-color: var(--light-text-color);
+  }
+}
+
+.booking__input::placeholder {
+  font-size: 14px;
+  color: rgba(157, 164, 189, 0.3);
+  opacity: 0;
+
+  transition: opacity var(--animation) 250ms;
+}
+.booking__input:focus::placeholder {
+  opacity: 1;
+}
+
+.booking-massage-field {
+  position: relative;
+  display: block;
+  height: 76px;
+  margin-bottom: 44px;
+}
+
+.booking-massage {
+  resize: none;
+  height: 100%;
+}

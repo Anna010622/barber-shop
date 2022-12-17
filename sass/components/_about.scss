@@ -1,0 +1,34 @@
+.about__container {
+  display: flex;
+  gap: 30px;
+}
+
+.about__list {
+  @media screen and (max-width: 767.98px) {
+    display: none;
+  }
+  @media screen and(min-width: 768px) {
+    display: flex;
+    gap: 30px;
+  }
+  @media screen and(min-width: 768px) and (max-width: 1199.98px) {
+    flex-direction: column;
+  }
+}
+
+.about__right-side {
+  @media screen and(min-width: 768px) {
+    width: 50%;
+  }
+  @media screen and(min-width: 1200px) {
+    width: 470px;
+  }
+}
+
+.about__description {
+  margin-bottom: 42px;
+
+  font-size: 14px;
+  line-height: calc(26 / 14);
+  color: var(--dark-text-color);
+}

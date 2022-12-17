@@ -1,0 +1,107 @@
+.price {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: #111319;
+  background-image: url(../images/bg/main-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  background-image: url(../images/price/mob/img_mob@1x.png);
+  background-image: image-set(
+    url(../images/price/mob/img_mob@2x.webp) 2x,
+    url(../images/price/mob/img_mob@1x.webp) 1x,
+    url(../images/price/mob/img_mob@2x.png) 2x,
+    url(../images/price/mob/img_mob@1x.png) 1x
+  );
+
+  @media screen and (min-width: 481px) {
+    background-image: url(../images/price/tab/img_tab@1x.png);
+    background-image: image-set(
+      url(../images/price/tab/img_tab@2x.webp) 2x,
+      url(../images/price/tab/img_tab@1x.webp) 1x,
+      url(../images/price/tab/img_tab@2x.png) 2x,
+      url(../images/price/tab/img_tab@1x.png) 1x
+    );
+  }
+
+  @media screen and (min-width: 769px) {
+    background-image: url(../images/price/desk/img_desk@1x.png);
+    background-image: image-set(
+      url(../images/price/desk/img_desk@2x.webp) 2x,
+      url(../images/price/desk/img_desk@1x.webp) 1x,
+      url(../images/price/desk/img_desk@2x.png) 2x,
+      url(../images/price/desk/img_desk@1x.png) 1x
+    );
+  }
+}
+.price__block {
+  margin-bottom: 44px;
+
+  @media screen and (max-width: 1199.98px) {
+    background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+    padding: 32px 40px;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    padding: 30px 20px 30px 40px;
+    font-size: 14px;
+    line-height: calc(18 / 14);
+  }
+
+  @media screen and(min-width:1200px) {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+}
+.price__list {
+  @media screen and (max-width: 1199.98px) {
+    &:nth-child(1) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and(min-width:1200px) {
+    flex-basis: 570px;
+
+    padding: 30px 20px;
+
+    &:nth-child(1) {
+      background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+    }
+    &:nth-child(2) {
+      background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+    }
+  }
+}
+
+.price__item {
+  display: flex;
+  align-items: baseline;
+
+  line-height: calc(44 / 30);
+  color: var(--secondary-text-color);
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &::before {
+    content: '';
+    display: inline-block;
+    flex-grow: 1;
+    height: 1px;
+
+    background: rgba(157, 164, 189, 0.12);
+  }
+}
+
+.price__service {
+  order: -1;
+}
+
+.price__btn {
+  display: block;
+  margin: 0 auto;
+}

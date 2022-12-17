@@ -1,0 +1,129 @@
+.hero {
+  @media screen and (max-width: 767.98px) {
+    padding-top: 208px;
+    padding-bottom: 209px;
+
+    background-color: rgba(25, 28, 38, 0.9);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media screen and (max-width: 480px) {
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+      url(../images/hero/mob/img3mob@1x.jpg);
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+      image-set(
+        url(../images/hero/mob/img3mob@2x.webp) 2x,
+        url(../images/hero/mob/img3mob@1x.webp) 1x,
+        url(../images/hero/mob/img3mob@2x.jpg) 2x,
+        url(../images/hero/mob/img3mob@1x.jpg) 1x
+      );
+  }
+
+  @media screen and (min-width: 481px) and(max-width: 767.98px) {
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+      url(../images/hero/tab/img3tab@1x.jpg);
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+      image-set(
+        url(../images/hero/tab/img3tab@2x.webp) 2x,
+        url(../images/hero/tab/img3tab@1x.webp) 1x,
+        url(../images/hero/tab/img_tab@2x.jpg) 2x,
+        url(../images/hero/tab/img3tab@1x.jpg) 1x
+      );
+  }
+}
+
+.hero__container {
+  position: relative;
+  display: flex;
+}
+.hero__left-side {
+  @media screen and(max-width: 767.98px) {
+    display: none;
+  }
+
+  display: flex;
+  align-items: flex-end;
+
+  width: 100px;
+}
+
+.hero__media {
+  transform: rotate(-90deg) translateY(27px) translateX(40px);
+  transform-origin: bottom left;
+}
+
+.hero__right-side {
+  @media screen and (min-width: 768px) {
+    position: relative;
+
+    background-color: rgba(25, 28, 38, 0.9);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    flex-grow: 1;
+    padding-top: 272px;
+    padding-bottom: 208px;
+    padding-left: 100px;
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+      url(../images/hero/tab/img3tab@1x.jpg);
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+      image-set(
+        url(../images/hero/tab/img3tab@2x.webp) 2x,
+        url(../images/hero/tab/img3tab@1x.webp) 1x,
+        url(../images/hero/tab/img_tab@2x.jpg) 2x,
+        url(../images/hero/tab/img3tab@1x.jpg) 1x
+      );
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+      url(../images/hero/desk/img3desk@1x.jpg);
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+      image-set(
+        url(../images/hero/desk/img3desk@2x.webp) 2x,
+        url(../images/hero/desk/img3desk@1x.webp) 1x,
+        url(../images/hero/desk/img3desk@2x.jpg) 2x,
+        url(../images/hero/desk/img3desk@1x.jpg) 1x
+      );
+  }
+}
+
+.hero__upper-title {
+  animation: top-to-bottom 1000ms ease-in 200ms both;
+}
+.hero__title {
+  margin-bottom: 20px;
+
+  font-family: var(--secondary-font);
+  font-size: 48px;
+  line-height: calc(56 / 48);
+  letter-spacing: 0.05em;
+  color: var(--light-text-color);
+
+  animation: left-to-right 1000ms ease-in 1200ms both;
+
+  @media screen and (max-width: 359.98px) {
+    font-size: 38px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 72px;
+    line-height: calc(85 / 72);
+  }
+}
+.hero__under-title {
+  line-height: calc(30 / 18);
+  color: var(--secondary-text-color);
+
+  animation: bottom-to-top 1000ms ease-in 2200ms both;
+
+  @media screen and (max-width: 767.98px) {
+    font-size: 16px;
+  }
+}
