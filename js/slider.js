@@ -13,16 +13,16 @@ changeBackground(imgNum);
 
 function changeBackground(imgNum) {
   if (window.matchMedia('(max-width: 480.98px)').matches) {
-    hero.style.backgroundImage = `linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/hero/mob/img${imgNum}mob@1x.jpg)`;
+    hero.style.backgroundImage = `linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(./images/hero/mob/img${imgNum}mob@1x.jpg)`;
   }
   if (window.matchMedia('(min-width: 481px) and (max-width: 767.98px)').matches) {
-    hero.style.backgroundImage = `linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/hero/tab/img${imgNum}tab@1x.jpg)`;
+    hero.style.backgroundImage = `linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(./images/hero/tab/img${imgNum}tab@1x.jpg)`;
   }
   if (window.matchMedia('(min-width: 768px)').matches) {
-    heroRightSide.style.backgroundImage = `linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/hero/tab/img${imgNum}tab@1x.jpg)`;
+    heroRightSide.style.backgroundImage = `linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(./images/hero/tab/img${imgNum}tab@1x.jpg)`;
   }
   if (window.matchMedia('(min-width: 1200px)').matches) {
-    heroRightSide.style.backgroundImage = `linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/hero/desk/img${imgNum}desk@1x.jpg)`;
+    heroRightSide.style.backgroundImage = `linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(./images/hero/desk/img${imgNum}desk@1x.jpg)`;
   }
 }
 
