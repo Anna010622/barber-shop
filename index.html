@@ -85,17 +85,17 @@
 						style.</p>
 
 					<ul class="slider-pagination">
-						<li class="slider-pagination__item slider-pagination__item--active"></li>
-						<li class="slider-pagination__item"></li>
-						<li class="slider-pagination__item"></li>
+						<li class="slider-pagination__item" data-value="1"></li>
+						<li class="slider-pagination__item" data-value="2"></li>
+						<li class="slider-pagination__item slider-pagination__item--active" data-value="3"></li>
 					</ul>
 
 					<ul class="slider">
 						<li class="slider__item">
-							<button class="slider__btn slider__btn--prev" disabled type="button">Back</button>
+							<button class="slider__btn slider__btn--prev js-btn-back" type="button">Back</button>
 						</li>
 						<li class="slider__item">
-							<button class="slider__btn slider__btn--next" type="button">Forward</button>
+							<button class="slider__btn slider__btn--next js-btn-forward" type="button">Forward</button>
 						</li>
 					</ul>
 
@@ -959,15 +959,15 @@
         </button>
   
         <ul class="mobile-menu">
-          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#about">About</a></li>
-          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#prices">Services and prices</a></li>
-          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#barbers">Barbers</a></li>
-          <li class="mobile-menu__item"><a class="mobile-menu__link" href="#contacts">Contacts</a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link js-close-menu" href="#about">About</a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link js-close-menu" href="#prices">Services and prices</a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link js-close-menu" href="#barbers">Barbers</a></li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link js-close-menu" href="#contacts">Contacts</a></li>
         </ul>
   
         <div class="menu__group">
           <a class="menu__contact" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button class="menu__btn btn" type="button" data-modal-open>Online-booking</button>
+          <button class="menu__btn btn js-close-menu" type="button" data-modal-open>Online-booking</button>
         </div>
   
         <ul class="media menu__media">
@@ -989,7 +989,8 @@
     ></script>
     <script defer src="js/mobile-menu.js"></script>
 
-    <script src="./js/header-scroll.js"></script>
-    <script src="./js/modal.js"></script>
+    <script src="./js/header-scroll.js" type="module"></script>
+    <script src="./js/modal.js" type="module"></script>
+    <script src="./js/slider.js" type="module"></script>
   </body>
 </html>

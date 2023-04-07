@@ -7,20 +7,20 @@
   @media screen and (max-width: 767.98px) {
     display: none;
   }
-  @media screen and(min-width: 768px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     gap: 30px;
   }
-  @media screen and(min-width: 768px) and (max-width: 1199.98px) {
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
     flex-direction: column;
   }
 }
 
 .about__right-side {
-  @media screen and(min-width: 768px) {
+  @media screen and (min-width: 768px) {
     width: 50%;
   }
-  @media screen and(min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     width: 470px;
   }
 }

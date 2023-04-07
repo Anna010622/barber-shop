@@ -71,6 +71,13 @@ html {
   scroll-behavior: smooth;
 }
 
+.noScroll {
+  overflow: hidden;
+}
+.noScroll ::-webkit-scrollbar {
+  width: 0px;
+}
+
 .card-set {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -587,24 +594,6 @@ html {
     background-position: center;
   }
 }
-@media screen and (max-width: 480px) {
-  .hero {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), url(../images/hero/mob/img3mob@1x.jpg);
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/hero/mob/img3mob@1x.jpg);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), image-set(url(../images/hero/mob/img3mob@2x.webp) 2x, url(../images/hero/mob/img3mob@1x.webp) 1x, url(../images/hero/mob/img3mob@2x.jpg) 2x, url(../images/hero/mob/img3mob@1x.jpg) 1x);
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), -webkit-image-set(url(../images/hero/mob/img3mob@2x.webp) 2x, url(../images/hero/mob/img3mob@1x.webp) 1x, url(../images/hero/mob/img3mob@2x.jpg) 2x, url(../images/hero/mob/img3mob@1x.jpg) 1x);
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), image-set(url(../images/hero/mob/img3mob@2x.webp) 2x, url(../images/hero/mob/img3mob@1x.webp) 1x, url(../images/hero/mob/img3mob@2x.jpg) 2x, url(../images/hero/mob/img3mob@1x.jpg) 1x);
-  }
-}
-@media screen and (min-width: 481px) and (max-width: 767.98px) {
-  .hero {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), url(../images/hero/tab/img3tab@1x.jpg);
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/hero/tab/img3tab@1x.jpg);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), image-set(url(../images/hero/tab/img3tab@2x.webp) 2x, url(../images/hero/tab/img3tab@1x.webp) 1x, url(../images/hero/tab/img_tab@2x.jpg) 2x, url(../images/hero/tab/img3tab@1x.jpg) 1x);
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), -webkit-image-set(url(../images/hero/tab/img3tab@2x.webp) 2x, url(../images/hero/tab/img3tab@1x.webp) 1x, url(../images/hero/tab/img_tab@2x.jpg) 2x, url(../images/hero/tab/img3tab@1x.jpg) 1x);
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), image-set(url(../images/hero/tab/img3tab@2x.webp) 2x, url(../images/hero/tab/img3tab@1x.webp) 1x, url(../images/hero/tab/img_tab@2x.jpg) 2x, url(../images/hero/tab/img3tab@1x.jpg) 1x);
-  }
-}
 
 .hero__container {
   position: relative;
@@ -648,24 +637,6 @@ html {
     padding-top: 272px;
     padding-bottom: 208px;
     padding-left: 100px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .hero__right-side {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), url(../images/hero/tab/img3tab@1x.jpg);
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/hero/tab/img3tab@1x.jpg);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), image-set(url(../images/hero/tab/img3tab@2x.webp) 2x, url(../images/hero/tab/img3tab@1x.webp) 1x, url(../images/hero/tab/img_tab@2x.jpg) 2x, url(../images/hero/tab/img3tab@1x.jpg) 1x);
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), -webkit-image-set(url(../images/hero/tab/img3tab@2x.webp) 2x, url(../images/hero/tab/img3tab@1x.webp) 1x, url(../images/hero/tab/img_tab@2x.jpg) 2x, url(../images/hero/tab/img3tab@1x.jpg) 1x);
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), image-set(url(../images/hero/tab/img3tab@2x.webp) 2x, url(../images/hero/tab/img3tab@1x.webp) 1x, url(../images/hero/tab/img_tab@2x.jpg) 2x, url(../images/hero/tab/img3tab@1x.jpg) 1x);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .hero__right-side {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), url(../images/hero/desk/img3desk@1x.jpg);
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/hero/desk/img3desk@1x.jpg);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(25, 28, 38, 0.2)), to(rgba(25, 28, 38, 0.2))), image-set(url(../images/hero/desk/img3desk@2x.webp) 2x, url(../images/hero/desk/img3desk@1x.webp) 1x, url(../images/hero/desk/img3desk@2x.jpg) 2x, url(../images/hero/desk/img3desk@1x.jpg) 1x);
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), -webkit-image-set(url(../images/hero/desk/img3desk@2x.webp) 2x, url(../images/hero/desk/img3desk@1x.webp) 1x, url(../images/hero/desk/img3desk@2x.jpg) 2x, url(../images/hero/desk/img3desk@1x.jpg) 1x);
-    background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), image-set(url(../images/hero/desk/img3desk@2x.webp) 2x, url(../images/hero/desk/img3desk@1x.webp) 1x, url(../images/hero/desk/img3desk@2x.jpg) 2x, url(../images/hero/desk/img3desk@1x.jpg) 1x);
   }
 }
 
@@ -1438,8 +1409,7 @@ html {
 }
 .contacts__link[href^=mailto] {
   font-weight: 400;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 .contacts__link:hover, .contacts__link:focus {
   color: var(--light-text-color);
@@ -1532,6 +1502,7 @@ html {
           justify-content: center;
   width: 100%;
   height: 100%;
+  padding: 15px;
   background-color: rgba(25, 28, 38, 0.4);
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
@@ -1555,8 +1526,8 @@ html {
 }
 
 .modal {
-  position: absolute;
-  width: 550px;
+  position: relative;
+  max-width: 528px;
   min-height: 580px;
   padding: 40px;
   background-color: #fff;
@@ -1853,7 +1824,7 @@ html {
   right: 0;
   width: 100vw;
   height: 100vh;
-  padding-left: 30%;
+  padding-left: 20%;
   background: rgba(25, 28, 38, 0.2);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);

@@ -1,5 +1,5 @@
 .booking {
-  @media screen and(min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     width: 570px;
   }
 }
@@ -12,17 +12,17 @@
     flex-direction: column;
     gap: 44px;
   }
-  @media screen and(min-width: 768px) {
+  @media screen and (min-width: 768px) {
     gap: 30px;
   }
 }
 .booking__field {
   position: relative;
 
-  @media screen and(min-width: 768px) {
+  @media screen and (min-width: 768px) {
     flex-basis: 330px;
   }
-  @media screen and(min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     flex-basis: 270px;
   }
 }
